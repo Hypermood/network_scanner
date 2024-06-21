@@ -18,5 +18,6 @@ def check_threat_intelligence(ips):
         response = requests.request(method='GET', url=url, headers=headers, params=querystring)
         decodedResponse = json.loads(response.text)
 
-        threat_reports[ip] = decodedResponse
+        threat_reports[ip] = (json.dumps(decodedResponse, sort_keys=True, indent=4))
+        print(json.dumps(decodedResponse, sort_keys=True, indent=4))
     return threat_reports

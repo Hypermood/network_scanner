@@ -23,15 +23,6 @@ def get_unix_connections():
     return result.stdout.splitlines()
 
 def get_unique_ips(connections):
-    # Extract unique IP addresses from the connections
-    # unique_ips = set()
-    # for line in connections:
-    #     parts = line.split()
-    #     if len(parts) > 4:
-    #         ip = parts[4].split(':')[0]
-    #         if ip != '127.0.0.1':
-    #             unique_ips.add(ip)
-    # return list(unique_ips)
 
     ip_regex = re.compile(r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b')
     unique_ips = set()
