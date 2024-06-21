@@ -1,4 +1,6 @@
-from gatherer import gatherer, threat_check
+from src.network_scanner import gatherer
+from src.network_scanner import threat_check
+
 
 def main():
     connections = gatherer.get_network_connections()

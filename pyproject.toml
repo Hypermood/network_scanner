@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "network_scanner"
+version = "0.0.1"
+authors = [
+  { name="Vladimir Pavlov"},
+]
+description = "This application gathers network connection information (active and past connectivity from logs) and checks the list of unique public network information against a threat intelligence platform."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["requests", "netifaces"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

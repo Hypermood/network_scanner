@@ -1,0 +1,5 @@
+venv
+build
+dist
+network_scanner.egg-info
+.idea
